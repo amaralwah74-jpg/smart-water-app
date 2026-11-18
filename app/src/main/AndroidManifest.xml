@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.water.project">
+
+    <!-- الصلاحيات المطلوبة (مثل فتح الواتساب، التخزين، إلخ) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="إدارة مشروع المياه"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- الشاشة الرئيسية أو القائمة -->
+        <activity android:name=".MainApp"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- واجهة العامل الميداني -->
+        <activity android:name=".WorkerActivity" android:exported="false" />
+
+        <!-- لوحة تحكم المدير -->
+        <activity android:name=".ManagerActivity" android:exported="false" />
+
+    </application>
+
+</manifest>
